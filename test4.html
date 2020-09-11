@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      /* Basic outline settings  */
+      body {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        background-color: cadetblue;
+      }
+      .dot,
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 100px;
+      }
+      .dot1,
+      .dot2,
+      .dot3 {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: white;
+        margin: 15px;
+      }
+      .box1,
+      .box2,
+      .box3,
+      .box4,
+      .box5 {
+        width: 10px;
+        height: 50px;
+        margin: 3px;
+        background-color: white;
+      }
+      /* Make two animations  */
+      @keyframes animation1 {
+        0% {
+          transform: rotateZ(0deg);
+        }
+        50% {
+          transform: rotateZ(180deg);
+        }
+        100% {
+          transform: rotateZ(360deg);
+        }
+      }
+      @keyframes animation2 {
+        0% {
+          transform: scaleY(1);
+        }
+        30% {
+          transform: scaleY(2);
+        }
+        60% {
+          transform: scaleY(1);
+        }
+      }
+      /* dot, box Apply animation */
+      .dot {
+        animation: animation1 2s ease-in-out infinite;
+      }
+      .box1 {
+        animation: animation2 1s ease-in-out infinite;
+        animation-delay: 0.1s;
+      }
+      .box2 {
+        animation: animation2 1s ease-in-out infinite;
+        animation-delay: 0.2s;
+      }
+      .box3 {
+        animation: animation2 1s ease-in-out infinite;
+        animation-delay: 0.3s;
+      }
+      .box4 {
+        animation: animation2 1s ease-in-out infinite;
+        animation-delay: 0.4s;
+      }
+      .box5 {
+        animation: animation2 1s ease-in-out infinite;
+        animation-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="dot">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+      </div>
+      <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+      </div>
+    </section>
+  </body>
+</html>
